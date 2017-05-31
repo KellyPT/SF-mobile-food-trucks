@@ -4,6 +4,7 @@
   "description": "San Francisco Mobile Food Trucks",
   "main": "FoodTruckFinder.js",
   "dependencies": {
+    "columnify": "^1.5.4",
     "request": "^2.81.0",
     "url": "^0.11.0"
   },
