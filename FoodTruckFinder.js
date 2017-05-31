@@ -31,5 +31,7 @@ request(dataURL, function(error, response, body){
         process.exit(1);
       }
     var results = JSON.parse(body);
-    console.log(columnify(results));
+    console.log(columnify(results, {
+        columnSplitter: '  |  '
+    }));
 });
