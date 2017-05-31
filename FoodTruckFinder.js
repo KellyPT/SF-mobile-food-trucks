@@ -13,13 +13,8 @@ var moment = require('moment');
 require('moment-timezone');
 var columnify = require('columnify');
 
-// var currentDate = new Date();
-// var currentDay = currentDate.getDay();
-
-// var currentTime = "'" + ("0" + (currentDate.getHours() + 10)).slice(-2) + ":" + ("0" + currentDate.getMinutes()).slice(-2) + "'";
-
 var localDate = moment();
-var sfDate = moment.tz(currentDate.format(), "America/Los_Angeles");
+var sfDate = moment.tz(localDate.format(), "America/Los_Angeles");
 var currentDay = sfDate.day();
 var currentTime = sfDate.format("HH:mm");
 
