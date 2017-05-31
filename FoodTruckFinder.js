@@ -5,7 +5,7 @@ require('moment-timezone');
 var columnify = require('columnify');
 
 var localDate = moment();
-var sfDate = moment.tz(localDate.format(), "America/Los_Angeles");
+var sfDate = moment.tz(localDate.format(), "America/Los_Angeles"); // convert date time to San Francisco timezone
 var currentDay = sfDate.day();
 var currentTime = sfDate.format("HH:mm");
 
