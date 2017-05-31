@@ -18,8 +18,8 @@ var sfDate = moment.tz(localDate.format(), "America/Los_Angeles");
 var currentDay = sfDate.day();
 var currentTime = sfDate.format("HH:mm");
 
-console.log(currentDay);
-console.log(currentTime);
+console.log("Day of week (SF) = " + currentDay);
+console.log("Time (SF) = " + currentTime);
 
 var resultsPerPage = 10;
 var pageOffset = 1; // default pageOffset to 1, unless it's defined in the arguments
