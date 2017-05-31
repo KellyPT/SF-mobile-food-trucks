@@ -1,0 +1,24 @@
+{
+  "name": "mobile-food-trucks",
+  "version": "1.0.0",
+  "description": "San Francisco Mobile Food Trucks",
+  "main": "FoodTruckFinder.js",
+  "dependencies": {
+    "request": "^2.81.0",
+    "url": "^0.11.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KellyPT/SF-mobile-food-trucks.git"
+  },
+  "author": "Kelly Tran",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KellyPT/SF-mobile-food-trucks/issues"
+  },
+  "homepage": "https://github.com/KellyPT/SF-mobile-food-trucks#readme"
+}
