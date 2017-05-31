@@ -10,26 +10,25 @@
 var request = require('request');
 var url = require('url');
 
+var currentDate = new Date();
+var currentDay = currentDate.getDay();
+
+var currentTime = "'" + ("0" + currentDate.getHours()).slice(-2) + ":" + ("0" + currentDate.getMinutes()).slice(-2) + "'";
+
 var options = {
     protocol: "http:",
     host: "data.sfgov.org",
     pathname: "/resource/bbb8-hzi6.json",
-    search: "$query=SELECT applicant, location LIMIT 10"
+    search: "$query=SELECT applicant, location, dayorder, start24, end24 WHERE dayorder=" + currentDay + " AND start24 <=" + currentTime + " AND " + currentTime + "<= end24 ORDER BY applicant ASC"
 };
 
 var dataURL = url.format(options);
 
 request(dataURL, function(error, response, body){
     if (error) {
-        console.log("Failed to load business IDs from API");
+        console.log("Failed to load data.");
         process.exit(1);
       }
     var results = JSON.parse(body);
     console.log(results);
 });
-
-// Applicant
-// PermitLocation
-// start24 <= Now <= end24
-// DayOfWeek
-// sorted alphabetically
